@@ -1,11 +1,23 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+
+import TaskListView from './app/screens/TaskListView';
+
+
+import {
+   StyleSheet, 
+   Text, 
+   View 
+
+} from 'react-native';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+
+    <View style={styles.TaskListViewStyle}>
+    <TaskListView/>
+    </View>
+      
     </View>
   );
 }
@@ -13,8 +25,17 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: 'pink',
     alignItems: 'center',
-    justifyContent: 'center',
+    flexDirection:'column-reverse',
+    height:'97%',
   },
+
+  TaskListViewStyle:{
+    width:'100%',
+    height:'97%',
+    borderColor:'purple',
+    borderWidth:2,
+  },
+
 });
